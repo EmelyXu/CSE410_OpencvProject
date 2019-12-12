@@ -16,7 +16,7 @@ GLfloat pos[] = { 0, 0, 0, 1}, //light position
 emission[] = { 0, 0, 0, 1 },
 emission_default[] = { 0, 0, 0, 10 },
 amb[] = { .4, .4, .4, 1.0 }; //ambient intensity
-GLfloat Vs[] = { .6, .6, .6,1 };//specular
+GLfloat Vs[] = { 0.6,0.6,0.6,1 };//specular
 GLfloat front_amb_diff[] = { .9, .5, .1, 1.0 }; //front side property
 GLfloat back_amb_diff[] = { .4, .7, .1, 1.0 }; //back side property
 GLfloat spe[] = { .2, .2, .2, 1.0 }; //property for front and back
@@ -111,7 +111,6 @@ void snow(void) {
 	glBegin(GL_QUADS);
 
 	glEnd();
-	glLightfv(GL_LIGHTING, GL_SPECULAR, Vs);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_DEPTH_TEST);
 	glDisable(GL_TEXTURE_2D);
@@ -127,7 +126,8 @@ void moonOrSun(void) {
 	glMaterialfv(GL_FRONT, GL_EMISSION, emission_default);
 	glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, Vs);
-	glLightfv(GL_LIGHTING, GL_SPECULAR, Vs);
+	glLightfv(GL_LIGHTING,GL_SPECULAR, Vs);
+	glLightf(GL_LIGHT0, GL_LINEAR_ATTENUATION, 0.56);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 }
@@ -350,11 +350,7 @@ void idle(void) {
 void keyboard(unsigned char key, int x, int y) {
 	switch (key) {
 
-	case 'm':
-		//return big snowman to default
-		rotateLeft = false;
-		rotateRight = false;
-		break;
+	
 	case 'n':
 		//night time
 		moon = true;
@@ -365,12 +361,6 @@ void keyboard(unsigned char key, int x, int y) {
 		break;
 	case 'l':
 		snow_x += 0.1;
-		break;
-	case 'b':
-		snow_z -= 0.1;
-		break;
-	case 'f':
-		snow_z += 0.1;
 		break;
 	case 's':
 		spot_light_onff = !spot_light_onff;
