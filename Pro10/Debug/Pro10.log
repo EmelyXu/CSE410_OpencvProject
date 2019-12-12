@@ -1,0 +1,38 @@
+﻿  main.cpp
+C:\Users\xinyi\source\repos\Pro10\main.cpp(18,27): warning C4305:  'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(19,31): warning C4305:  'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(20,46): warning C4305:  'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(21,45): warning C4305:  'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(22,35): warning C4305:  'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(38,19): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(87,30): warning C4305:  'argument': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(99,21): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(99,15): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(101,23): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(101,15): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(103,27): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(103,17): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(105,25): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(105,17): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(143,12): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(205,12): warning C4244:  'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(206,45): warning C4305:  'initializing': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(209,39): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(232,44): warning C4305:  'argument': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(278,29): warning C4305:  'argument': truncation from 'double' to 'GLfloat'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(298,16): warning C4305:  '=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(317,17): warning C4305:  '+=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(321,17): warning C4305:  '-=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(333,34): warning C4244:  '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(334,51): warning C4244:  '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(342,31): warning C4244:  '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\xinyi\source\repos\Pro10\main.cpp(361,36): warning C4305:  'argument': truncation from 'double' to 'GLclampf'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(364,16): warning C4305:  '-=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(367,16): warning C4305:  '+=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(370,16): warning C4305:  '-=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(373,16): warning C4305:  '+=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(381,35): warning C4305:  'argument': truncation from 'double' to 'GLclampf'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(390,35): warning C4305:  'argument': truncation from 'double' to 'GLclampf'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(454,15): warning C4305:  '=': truncation from 'double' to 'float'
+C:\Users\xinyi\source\repos\Pro10\main.cpp(491,35): warning C4305:  'argument': truncation from 'double' to 'GLclampf'
+  Pro10.vcxproj -> C:\Users\xinyi\source\repos\Pro10\Debug\Pro10.exe
