@@ -17,9 +17,12 @@ emission[] = { 0, 0, 0, 1 },
 emission_default[] = { 0, 0, 0, 10 },
 amb[] = { .4, .4, .4, 1.0 }; //ambient intensity
 GLfloat Vs[] = { 0.6,0.6,0.6,1 };//specular
+GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
 GLfloat front_amb_diff[] = { .9, .5, .1, 1.0 }; //front side property
 GLfloat back_amb_diff[] = { .4, .7, .1, 1.0 }; //back side property
 GLfloat spe[] = { .2, .2, .2, 1.0 }; //property for front and back
+GLfloat hig_shininess[] = { 1000.0 }; 
+GLfloat no_mat[] = { 0.0, 0.0, 0.0, 1.0 };
 GLfloat dr = 0, moonHorizontal = 0, moonVertical = 0, snowmanMove = 0;
 
 int rot_x = 0, rot_y = 0, rot_z = 0; //rotate variables
@@ -127,7 +130,7 @@ void moonOrSun(void) {
 	glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, Vs);
 	glLightfv(GL_LIGHTING,GL_SPECULAR, Vs);
-	glLightf(GL_LIGHT0, GL_LINEAR_ATTENUATION, 0.56);
+	glLightf(GL_LIGHT0, GL_LINEAR_ATTENUATION, 0.56);//attenuation coefficient
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 }
@@ -158,10 +161,12 @@ void snowman(void) {
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, txId[2]);
 	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, hig_shininess);
 
 	gluSphere(q, .5, 40, 40);
-	//glutSolidSphere(.19, 40, 40);
-
+	//glutSolidSphere(.5, 40, 40);
+	
 	//glTranslated(0.0, -.6, 0);
 
 	//gluSphere(q, .4, 40, 40);
@@ -211,7 +216,7 @@ void display(void) {
 	glLightfv(GL_LIGHT1, GL_AMBIENT, white);
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, white);
 	glLightfv(GL_LIGHT1, GL_SPECULAR, white);
-
+	glLightf(GL_LIGHT1, GL_LINEAR_ATTENUATION, 0.56);//attenuation coefficient
 	if (spot_light_onff) {
 		glEnable(GL_LIGHT1); // enable light 1
 		glEnable(GL_LIGHTING);
@@ -488,8 +493,11 @@ int main(int argc, char** argv) {
 	glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, front_amb_diff);
 	glMaterialfv(GL_BACK, GL_AMBIENT_AND_DIFFUSE, back_amb_diff);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, spe);
-	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 30);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+	glMaterialfv(GL_BACK, GL_SPECULAR, spe);
+	//glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, spe);
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 90);
+	glMaterialfv(GL_FRONT, GL_SHININESS, hig_shininess);
 	glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
 	glMatrixMode(GL_MODELVIEW);
 	glutReshapeFunc(resize_scene);       //Initialize the viewport when the window size changes.
