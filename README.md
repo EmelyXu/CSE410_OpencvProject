@@ -8,5 +8,5 @@ you can run it directly.
 
 Ater that you should see a screen with a wood ball, grass land and a moving light source.
 
-Press "l" and "r" can make the sphere move toward left or right
+Press "l" and "r" can make the sphere move toward left or right. Light shoud get week while moving far from the light source.
 Press "s" can trun off all the lights in the environment.
